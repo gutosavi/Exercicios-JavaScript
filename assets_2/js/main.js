@@ -33,7 +33,10 @@ function carregar (){
         };
         
         res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
+        img.classList.toggle('mostrar');
     }
+
+    
 
 };
 

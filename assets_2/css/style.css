@@ -83,8 +83,13 @@ div.imagens{
 }
 
 #fotos{
+    display: none;
     border-radius: 50%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.205)
+}
+
+#fotos.mostrar{
+    display: block;
 }
 
 footer{
