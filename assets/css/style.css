@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sen:wght@400..800&display=swap');
+
+
+:root{
+    --color1: rgb(31, 112, 74);
+    --font1: "Open Sans", sans-serif; 
+
+}
+
+
+*{
+    box-sizing: border-box;
+    outline: 0;
+    font-family: var(--font1);
+    font-size: 1em;
+}
+
+body{
+    background-color: var(--color1);
+    padding: 0px;
+    margin: 0px;
+}
+
+section.container{
+    max-width: 640px;
+    margin: 100px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+section.container h1{
+    text-align: start;
+    padding-top: 10px;
+    font-size: 1.8em;
+}
+
+section.intro{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    gap: 100px;
+}
+
+div ul{
+    font-size: 1.2em;
+    line-height: 1.5;
+    list-style: none;
+    margin-left: -40px;
+}
+
+
+form.formulario label, input, button{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form.formulario input{
+    font-size: 1.2em;
+    height: 40px;
+}
+
+form.formulario input:focus{
+    outline: 1px solid var(--color1);
+}
+
+form.formulario button{
+    background-color: var(--color1);
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+form.formulario button:hover{
+    background-color: rgb(39, 136, 91);
+}
+
+div.resultado{
+    background-color:rgb(39, 136, 91);
+    font-size: 1.1em;
+}
+
+
+
+

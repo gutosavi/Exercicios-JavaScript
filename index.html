@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <section class="container">
+        <h1>Tabela IMC</h1>
+        <section class="intro">
+            <div>
+                <ul>
+                    <h2>IMC</h2>
+                    <li>Menos do que 18,5</li>
+                    <li>Entre 18,5 e 24,9</li>
+                    <li>Entre 25 e 29.9</li>
+                    <li>Entre 35 e 39,9</li>
+                    <li>Mais que 40</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <h2>Resultado:</h2>
+                    <li>Abaixo do peso</li>
+                    <li>Peso normal</li>
+                    <li>Obesidade grau 1</li>
+                    <li>Obesidade grau 2</li>
+                    <li>Obesidade grau 3</li>
+                </ul>
+            </div>
+        </section>
+
+        <h1>Calcule seu IMC</h1>
+
+        <form action="" class="formulario" onsubmit="calcularImc(event)">
+            <label for="input-peso">Peso:</label>
+            <input type="number" name="input-peso" id="input-peso">
+
+            <label for="input-altura">Altura:</label>
+            <input type="number" name="input-altura" id="input-altura">
+
+            <!-- <label for="input-teste-3">Label teste #3</label>
+            <input type="text" id="input-teste-3">
+
+            <label for="input-teste-4">Label teste #4</label>
+            <input type="text" id="input-teste-4"> -->
+
+            <button>Enviar</button>
+        </form>
+        <div class="resultado"></div>
+    </section>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
