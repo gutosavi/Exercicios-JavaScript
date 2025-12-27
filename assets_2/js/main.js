@@ -14,8 +14,10 @@ function carregar (){
         let genero = ''
         if (fsex[0].checked){
             genero = 'Homem'
-            if (idade <= 15){
+            if (idade <= 10){
                 img.setAttribute('src', '../assets_2/img/crianca-masc.png')
+            } else if (idade <= 20) {
+                img.setAttribute('src', '../assets_2/img/adolescente-masc.jpg')
             } else if (idade <= 50){
                 img.setAttribute('src','../assets_2/img/homem-adulto.jpg' )
             } else {
@@ -23,8 +25,10 @@ function carregar (){
             }
         } else if (fsex[1].checked){
             genero = 'Mulher'
-            if (idade <= 15){
+            if (idade <= 10){
                 img.setAttribute('src', '../assets_2/img/crianca-fem.png')
+            } else if (idade <= 20){
+                img.setAttribute('src', '../assets_2/img/adolescente-fem.jpg')
             } else if (idade <= 50){
                 img.setAttribute('src', '../assets_2/img/mulher-adulta.jpg')
             } else {
