@@ -65,7 +65,7 @@ function relogio (){
     //     relogio.innerHTML = '00:00:00';
     //     segundos = 0; 
     // });
-
+    
     };
 };
 
