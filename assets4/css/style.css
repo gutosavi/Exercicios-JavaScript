@@ -35,6 +35,10 @@ section#container{
     align-items: center;
 }
 
+section div{
+    margin-bottom: 10px;
+}
+
 #btn-add, #btn-fim{
     width: 80px;
     padding: 3px;
@@ -43,6 +47,15 @@ section#container{
     background-color: #99cac9;
     color: #fff;
     font-weight: 100;
+    cursor: pointer;
+}
+
+#btn-fim{
+    margin: 10px 0px;
+}
+
+input{
+    padding-left: 4px;
 }
 
 select#flista{
