@@ -24,7 +24,7 @@ function inLista(n, l){
 
 function adicionar(){
     if(isNumero(numero.value) && !inLista(numero.value, valores)){
-        valores.push(Number(numero.value))
+        valores.push(Number(numero.value));
         const item = document.createElement('option');
         item.textContent = `O valor ${numero.value} foi adicionado`;
         lista.appendChild(item);
@@ -43,6 +43,7 @@ btnFinalizar.addEventListener('click', function mostrarResultado(){
     if (valores.length === 0){
         alert('Adicione valores antes de finalizar')
     } else {
+
         res.innerHTML = `<br>Ao todo temos ${valores.length} valores cadastrados.</br>`;
 
         let maiorNumero = 0;
@@ -54,13 +55,14 @@ btnFinalizar.addEventListener('click', function mostrarResultado(){
 
         res.innerHTML += `<br>O maior valor informado é ${maiorNumero}.</br>`;
 
-        res.innerHTML += `<br>O menor valor informado é ${Math.min(...valores)}.</br>`;
+        res.innerHTML += `<br>O menor valor informado é ${Math.min(...valores)}.</br>`; // utilizando a função Math.min
 
-        const soma = valores.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0)
-        res.innerHTML += `<br>Somando todos os valores temos ${soma}.</br>`
+        const soma = valores.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0);
+        res.innerHTML += `<br>Somando todos os valores temos ${soma}.</br>`;
 
         const media = soma / (valores.length);
-        res.innerHTML += `<br>A média dos valores digitados é ${media.toFixed(2)}.</br>`
+        res.innerHTML += `<br>A média dos valores digitados é ${media.toFixed(2)}.</br>`;
+
     }
 });
 
