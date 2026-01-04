@@ -37,7 +37,6 @@ btnAdd.addEventListener('click', function(){
     adicionar(numero.value);
     numero.value = ''; //limpar o campo de input
     numero.focus(); //para o cursor voltar a piscar no input
-    console.log(numero.value)
 });
 
 btnFinalizar.addEventListener('click', function mostrarResultado(){
