@@ -40,25 +40,28 @@ btnAdd.addEventListener('click', function(){
 });
 
 btnFinalizar.addEventListener('click', function mostrarResultado(){
-    res.innerHTML = `<br>Ao todo temos ${valores.length} valores cadastrados.</br>`;
+    if (valores.length === 0){
+        alert('Adicione valores antes de finalizar')
+    } else {
+        res.innerHTML = `<br>Ao todo temos ${valores.length} valores cadastrados.</br>`;
 
-    let maiorNumero = 0;
-    for (let i = 1; i < valores.length; i++){
-        if (valores[i] > maiorNumero) {
-            maiorNumero = valores[i]
-        }
-    };
+        let maiorNumero = 0;
+        for (let i = 1; i < valores.length; i++){
+            if (valores[i] > maiorNumero) {
+                maiorNumero = valores[i]
+            }
+        };
 
-    res.innerHTML += `<br>O maior valor informado é ${maiorNumero}.</br>`;
+        res.innerHTML += `<br>O maior valor informado é ${maiorNumero}.</br>`;
 
-    res.innerHTML += `<br>O menor valor informado é ${Math.min(...valores)}.</br>`;
+        res.innerHTML += `<br>O menor valor informado é ${Math.min(...valores)}.</br>`;
 
-    const soma = valores.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0)
-    res.innerHTML += `<br>Somando todos os valores temos ${soma}.</br>`
+        const soma = valores.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0)
+        res.innerHTML += `<br>Somando todos os valores temos ${soma}.</br>`
 
-    const media = soma / (valores.length);
-    res.innerHTML += `<br>A média dos valores digitados é ${media.toFixed(2)}.</br>`
-    
+        const media = soma / (valores.length);
+        res.innerHTML += `<br>A média dos valores digitados é ${media.toFixed(2)}.</br>`
+    }
 });
 
 
