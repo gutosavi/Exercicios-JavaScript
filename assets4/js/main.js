@@ -41,7 +41,7 @@ btnAdd.addEventListener('click', function(){
 });
 
 btnFinalizar.addEventListener('click', function mostrarResultado(){
-    res.innerHTML = `<br>Ao todo temos ${valores.length} valores cadastrados</br>`;
+    res.innerHTML = `<br>Ao todo temos ${valores.length} valores cadastrados.</br>`;
 
     let maiorNumero = 0;
     for (let i = 1; i < valores.length; i++){
