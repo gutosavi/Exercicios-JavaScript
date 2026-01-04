@@ -19,7 +19,6 @@ header h1{
     font-size: 2.2em;
     text-align: center;
     margin-top: 50px;
-
 }
 
 section#container{
@@ -28,12 +27,27 @@ section#container{
     min-height: 250px;
     margin: 50px auto;
     border-radius: 10px;
-    padding: 10px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, .2)
-
-
+    padding: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
+#btn-add, #btn-fim{
+    width: 80px;
+    padding: 3px;
+    border: none;
+    border-radius: 5px;
+    background-color: #99cac9;
+    color: #fff;
+    font-weight: 100;
+}
+
+select#flista{
+    width: 350px; 
+}
 
 
 footer{
