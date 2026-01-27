@@ -25,9 +25,9 @@ function ValidaCPF(cpf){
 ValidaCPF.prototype.valida = function(){
     if(typeof this.cpfLimpo === 'undefined') return false;
     if(this.cpfLimpo.length !== 11) return false;
-    if(this.isSequencia()) return false;
+    if(this.isSequencia()) return false; // se o CPF for uma sequencia de números, retorna false;
 
-    const cpfParcial = this.cpfLimpo.slice(0, -2);
+    const cpfParcial = this.cpfLimpo.slice(0, -2); // para usar os 9 primeiros números
     const digito1 = this.criaDigito(cpfParcial);
     const digito2 = this.criaDigito(cpfParcial + digito1);
 
@@ -36,10 +36,10 @@ ValidaCPF.prototype.valida = function(){
 };
 
 ValidaCPF.prototype.criaDigito = function(cpfParcial){
-    const cpfArray = Array.from(cpfParcial);
-    let regressivo = cpfArray.length + 1;
+    const cpfArray = Array.from(cpfParcial); // trasforma os números em array
+    let regressivo = cpfArray.length + 1; // pra iniciar de 10;
     const digito = cpfArray.reduce((acc, valor) => {
-        acc += (regressivo * Number(valor));
+        acc += (regressivo * Number(valor)); // acc = acc + (regressivo * valor)
         regressivo--;
         return acc;
     }, 0)
@@ -52,7 +52,7 @@ ValidaCPF.prototype.isSequencia = function(){
     return sequencia === this.cpfLimpo;
 };
 
-const cpf = new ValidaCPF('009.345.390-65');
+const cpf = new ValidaCPF('705.484.450-52');
 
 if(cpf.valida()){
     console.log('CPF válido');
