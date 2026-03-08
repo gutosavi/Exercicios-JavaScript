@@ -30,6 +30,22 @@ function showStyle(element) {
   const css = document.querySelector(".css");
   const estilos = element.style.cssText.split("; ").join("; <br>");
   css.innerHTML = estilos;
+  salvaEstilos(element);
 }
 
+function salvaEstilos(element) {
+  localStorage.setItem("estilos", JSON.stringify(element.style.cssText));
+}
+
+function carregaEstilos() {
+  const css = document.querySelector(".css");
+  const estilosSalvos = localStorage.getItem("estilos");
+
+  if (estilosSalvos) {
+    const obj = JSON.parse(estilosSalvos);
+    css.innerHTML = obj.split("; ").join("; <br>");
+  }
+}
+
+carregaEstilos();
 controles.addEventListener("change", handleChange);
